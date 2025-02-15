@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     containers.forEach(container => {
         container.addEventListener("mouseenter", () => {
             container.style.transition = "transform 0.2s ease-out";
-            container.style.transform = "scale(1.05)"; // Slightly bigger
+            container.style.transform = "scale(1.015)"; // Slightly bigger
         });
 
         container.addEventListener("mouseleave", () => {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observerOptions = {
         root: null, // Använder viewport som root
-        threshold: 0.6, // När 60% av en sektion syns, markeras den som aktiv
+        threshold: 0.3, // När 60% av en sektion syns, markeras den som aktiv
     };
 
     function sectionObserverCallback(entries) {
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 🟢 FIX: Markera "Home" som aktiv när man är längst upp manuellt
     window.addEventListener("scroll", () => {
-        if (window.scrollY < 420) {
+        if (window.scrollY < 250) {
             setActiveLink("home");
         }
     });

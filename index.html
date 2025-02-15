@@ -11,75 +11,124 @@
 </head>
 <body id="home" class="grid-container">
     <header>
-        <h1>Hugo Nilsson</h1>
+        <div class="left-side-header">
+            <a class="bounceContainer" href="#home"><img src="src/assets/Snapchat-1902347618 (1).jpg" alt="Hugo Nilsson profilbild"></a>
+            <h1>Hugo Nilsson</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="bounceBtn" href="#home">Home</a></li>
+                <li><a class="bounceBtn" href="#about">About</a></li>
+                <li><a class="bounceBtn" href="#projects">Projects</a></li>
+                <li><a class="bounceBtn" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
         <section class="home">
-            <h1>Hi, I'm Hugo!</h1>
-            <p id="introduction">Currently studying Software Development, focusing on coding, system design, and building practical applications. I'm passionate about technology and enjoy working on projects that challenge me to think critically and improve my skills. Always eager to explore new tools and techniques to stay up to date in the ever-evolving tech world. 🚀</p>
+            <h1>Hi, I'm Hugo<span class="span-marked">!</span></h1>
+            <p id="introduction">Currently studying <span class="span-marked">Software Development</span>, focusing on coding, system design, and building practical applications. I'm passionate about technology and enjoy working on projects that challenge me to think critically and improve my skills. Always eager to explore new tools and techniques to stay up to date in the ever-evolving tech world. 🚀</p>
 
             <a href="#about" class="bounceBtn button">About</a>
         </section>
 
         <section id="about" class="about">
             <section id="about" class="container">
-                <h2>About Me</h2>
-                <p>I'm a 32-year-old software engineer with a passion for technology and problem-solving. I've always been fascinated by how technology has changed the way we live, work, and communicate. I decided to pursue a career in software development after finishing my undergraduate studies in Computer Science at the University of Helsinki. I'm currently working remotely as a software engineer at a small tech company.</p>
+                <section id="about" class="about-container">
+                    <div class="about-me">
+                        <h2>About Me</h2>
+                        <p>Currently studying <span class="span-marked">Software Development</span></p>
+                    </div>
+                    <div class="get-to-know-me">
+                        <h3>Get to know me<span class="span-marked">!</span></h3>
+                        <p>I'm a 22-year-old software developement student with a passion for technology and problem-solving. I've always been fascinated by how technology has changed the way we live, work, and communicate.</p>
+                        <a href="#projects" id="abt-proj" class="bounceBtn button">Projects</a>
+                    </div>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </section>
             </section>
         </section>
 
         <section id="projects" class="projects">
-            <div class="bounceContainer carousel">
-                <button id="prevBtn" class="bounceBtn button">&#10094;</button> <!-- Vänster pil -->
-                <div class="carousel-container">
-                    <div class="carousel-item active">
-                        <div class="projects-structure">
-                        <div class="projects-info">
-                                <h2>Solace</h2>
-                                <p>Desktop application is designed to help people deal with stress and anxiety</p>
-                            </div>
-                            <div class="projects-description">
-                                <img src="src\assets\Nytt projekt.jpg" alt="Project 1">
-                            </div>
-                        </div>
+            <div class="project bounceContainer">
+                <div class="projects-structure">
+                    <div class="projects-info">
+                        <h2><span class="span-marked">Solace</span></h2>
+                        <p>Desktop application designed to help people deal with stress and anxiety.</p>
+                        <ul>
+                            <li>Python</li>
+                            <li>NoSQL</li>
+                            <li>Git</li>
+                        </ul>
                     </div>
-
-                    <div class="carousel-item active">
-                        <div class="projects-structure">
-                        <div class="projects-info">
-                                <h2>Investment Tracker</h2>
-                                <p>Desktop application is designed to help people deal with stress and anxiety</p>
-                            </div>
-                            <div class="projects-description">
-                                <img src="src\assets\tech-daily-ztYmIQecyH4-unsplash.jpg" alt="Project 1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item active">
-                        <div class="projects-structure">
-                        <div class="projects-info">
-                                <h2>Basic Website</h2>
-                                <p>Desktop application is designed to help people deal with stress and anxiety</p>
-                            </div>
-                            <div class="projects-description">
-                                <img src="src\assets\Nytt projekt (2).jpg" alt="Project 1">
-                            </div>
+                    <div class="projects-description">
+                        <img src="src/assets/Nytt projekt.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <p>This is a detailed description of the project that appears on hover.</p>
                         </div>
                     </div>
                 </div>
-                <button id="nextBtn" class="bounceBtn button">&#10095;</button> <!-- Höger pil -->
             </div>
-            
+        
+            <div class="project bounceContainer">
+                <div class="projects-structure">
+                    <div class="projects-description">
+                        <img src="src/assets/tech-daily-ztYmIQecyH4-unsplash.jpg" alt="Project 2">
+                        <div class="project-overlay">
+                            <p>Investment Tracker is a discord-bot in its early stages. 
+                                This bot allows the user to log their investments, share buy/sell signals, 
+                                show ongoing trades/swings, show statistics of sold trades/swings. 
+                                The bot is currently in early stages in development and not ready to be used.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects-info">
+                        <h2><span class="span-marked">Investment Tracker</span></h2>
+                        <p>Tool to manage and track investments efficiently.</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project bounceContainer">
+                <div class="projects-structure">
+                    <div class="projects-info">
+                        <h2><span class="span-marked">Basic Website</span></h2>
+                        <p>A simple website showcasing modern web development techniques.</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="projects-description">
+                        <img src="src/assets/Nytt projekt (2).jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <p>This is a detailed description of the project that appears on hover.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="contacts">
