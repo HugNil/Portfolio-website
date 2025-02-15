@@ -14,6 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const containers = document.querySelectorAll(".bounceContainer"); // Target the container class
+
+    containers.forEach(container => {
+        container.addEventListener("mouseenter", () => {
+            container.style.transition = "transform 0.2s ease-out";
+            container.style.transform = "scale(1.05)"; // Slightly bigger
+        });
+
+        container.addEventListener("mouseleave", () => {
+            container.style.transition = "transform 0.3s ease-in";
+            container.style.transform = "scale(1)"; // Back to normal size
+        });
+    });
+
+
     // 🎯 NAVIGATION - LÄGG TILL "ACTIVE" VID KLICK OCH SMOOTH SCROLL
     const navLinks = document.querySelectorAll("nav ul li a");
 
@@ -55,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 🟢 FIX: Markera "Home" som aktiv när man är längst upp manuellt
     window.addEventListener("scroll", () => {
-        if (window.scrollY < 400) {
+        if (window.scrollY < 420) {
             setActiveLink("home");
         }
     });
@@ -73,4 +88,38 @@ document.addEventListener("DOMContentLoaded", () => {
             activeLink.classList.add("active");
         }
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".carousel-item");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            item.classList.remove("active", "prev", "next");
+
+            if (index === currentIndex) {
+                item.classList.add("active");
+            } else if (index === (currentIndex - 1 + items.length) % items.length) {
+                item.classList.add("prev");
+            } else if (index === (currentIndex + 1) % items.length) {
+                item.classList.add("next");
+            }
+        });
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length; // Go back, loop around
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % items.length; // Go forward, loop around
+        updateCarousel();
+    });
+
+    updateCarousel(); // Initialize first item
 });
