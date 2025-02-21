@@ -133,8 +133,25 @@
 
         <section id="contact" class="contacts">
             <section id="contact" class="container">
-                <h2>About Me</h2>
-                <p>I'm a 32-year-old software engineer with a passion for technology and problem-solving. I've always been fascinated by how technology has changed the way we live, work, and communicate. I decided to pursue a career in software development after finishing my undergraduate studies in Computer Science at the University of Helsinki. I'm currently working remotely as a software engineer at a small tech company.</p>
+                <div class="container1">
+                    <form action="action_page.php">
+                  
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  
+                      <label for="email">email</label>
+                      <input type="text" id="email" name="email" placeholder="Your email..">
+                  
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Submit" class="bounceBtn">
+                  
+                    </form>
+                  </div>
             </section>
         </section>
     </main>
